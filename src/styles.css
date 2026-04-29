@@ -144,5 +144,63 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 600;
+    color: var(--heading);
+  }
+}
+
+@layer components {
+  .section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--heading);
+  }
+  .section-subtitle {
+    color: var(--subtitle);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  .btn-primary-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    padding: 0.875rem 2.25rem;
+    font-weight: 500;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    transition: all 0.25s ease;
+    border: 2px solid var(--primary);
+  }
+  .btn-primary-pill:hover {
+    background-color: transparent;
+    color: var(--primary);
+  }
+  .btn-outline-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    padding: 0.875rem 2.25rem;
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    transition: all 0.25s ease;
+  }
+  .btn-outline-pill:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
   }
 }
