@@ -174,8 +174,8 @@ function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <img
             src={aboutImg}
-            alt="Simone portrait"
-            className="rounded-lg shadow-xl w-full object-cover"
+            alt="Chipo Brenda Madzinga portrait"
+            className="rounded-lg shadow-xl w-full object-cover aspect-[3/4]"
             loading="lazy"
             width={900}
             height={1100}
