@@ -37,9 +37,9 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Chipo Brenda Madzinga — Software Developer based in Harare, Zimbabwe. Frontend, backend & system development portfolio.",
+          "Chipo Brenda Madzinga - Software Developer based in Harare, Zimbabwe. Frontend, backend & system development portfolio.",
       },
-      { property: "og:title", content: "Brenda Madzinga — Software Developer" },
+      { property: "og:title", content: "Brenda Portfolio" },
       {
         property: "og:description",
         content: "Portfolio of Chipo Brenda Madzinga, software developer specialising in React, Python & Django.",
