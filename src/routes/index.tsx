@@ -33,13 +33,13 @@ const p6 = "/images/p6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Brenda Madzinga — Software Developer Portfolio" },
+      { title: "Brenda Portfolio" },
       {
         name: "description",
         content:
-          "Chipo Brenda Madzinga — Software Developer based in Harare, Zimbabwe. Frontend, backend & system development portfolio.",
+          "Chipo Brenda Madzinga - Software Developer based in Harare, Zimbabwe. Frontend, backend & system development portfolio.",
       },
-      { property: "og:title", content: "Brenda Madzinga — Software Developer" },
+      { property: "og:title", content: "Brenda Portfolio" },
       {
         property: "og:description",
         content: "Portfolio of Chipo Brenda Madzinga, software developer specialising in React, Python & Django.",
@@ -185,12 +185,12 @@ function About() {
               I'm Chipo Brenda Madzinga, a <span className="text-primary">Software Developer</span>
             </h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              I build reliable systems end-to-end — from clean, responsive frontends to robust
+              I build reliable systems end-to-end - from clean, responsive frontends to robust
               backends. I'm proficient in HTML, CSS, React, Python and Django, and I enjoy turning
               real-world problems into well-engineered software.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Alongside development, I also do UI/UX design and web design — making sure the
+              Alongside development, I also do UI/UX design and web design - making sure the
               systems I deliver are both functional and pleasant to use.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 text-sm">
@@ -241,7 +241,7 @@ function Services() {
               </div>
               <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Delivering practical software with clean code and a thoughtful user experience —
+                Delivering practical software with clean code and a thoughtful user experience -
                 tailored to your goals, users and budget.
               </p>
             </div>
@@ -301,7 +301,7 @@ function Resume() {
             <h3 className="text-2xl font-semibold mb-8">My Experience</h3>
             <TimelineItem
               date="2+ Years"
-              title="Resident Innovator — System Development"
+              title="Resident Innovator - System Development"
               place="Zimbabwe Centre for High Performance Computing (ZCHPC)"
               desc="Collaborated on building different systems including the ZCHPC ERP, web platforms and internal tools using Python, Django and React."
             />
@@ -331,7 +331,7 @@ function Resume() {
 const projects = [
   { img: p1, title: "CALSWUZ Website (calswuz.org.zw)", cat: "Web" },
   { img: p2, title: "ZCHPC ERP System", cat: "Systems" },
-  { img: p3, title: "Farm Connect — E‑commerce", cat: "Web" },
+  { img: p3, title: "Farm Connect - Ecommerce", cat: "Web" },
   { img: p4, title: "Online Clearance System (PHP)", cat: "Systems" },
   { img: p5, title: "CV / Resume Ranking System (Python & Django)", cat: "Systems" },
   { img: p6, title: "UI/UX Concepts", cat: "Design" },
@@ -392,7 +392,7 @@ function Testimonials() {
         <SectionHeader subtitle="Client Speak" title="Testimonial" />
         <div className="max-w-2xl mx-auto text-center p-10 rounded-lg bg-secondary">
           <p className="text-muted-foreground leading-relaxed">
-            Testimonials coming soon — I'm currently collecting feedback from collaborators and
+            Testimonials coming soon - I'm currently collecting feedback from collaborators and
             clients on recently delivered projects.
           </p>
         </div>
