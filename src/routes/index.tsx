@@ -33,7 +33,7 @@ const p6 = "/images/p6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Brenda Madzinga — Software Developer Portfolio" },
+      { title: "Brenda Portfolio" },
       {
         name: "description",
         content:
