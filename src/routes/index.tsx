@@ -185,7 +185,7 @@ function About() {
               I'm Chipo Brenda Madzinga, a <span className="text-primary">Software Developer</span>
             </h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              I build reliable systems end-to-end — from clean, responsive frontends to robust
+              I build reliable systems end-to-end - from clean, responsive frontends to robust
               backends. I'm proficient in HTML, CSS, React, Python and Django, and I enjoy turning
               real-world problems into well-engineered software.
             </p>
