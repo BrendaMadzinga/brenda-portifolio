@@ -3,7 +3,7 @@ import { useState } from "react";
 import {
   Twitter,
   Facebook,
-  Dribbble,
+  Github,
   Instagram,
   Linkedin,
   Download,
@@ -11,35 +11,38 @@ import {
   Monitor,
   Layers,
   Smartphone,
-  BarChart3,
-  Search,
+  Code2,
+  Server,
   MapPin,
   Phone,
   Mail,
   ChevronDown,
 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
-import aboutImg from "@/assets/about.jpg";
-import p1 from "@/assets/p1.jpg";
-import p2 from "@/assets/p2.jpg";
-import p3 from "@/assets/p3.jpg";
-import p4 from "@/assets/p4.jpg";
-import p5 from "@/assets/p5.jpg";
-import p6 from "@/assets/p6.jpg";
+
+// Images are served from the public/images folder so you can replace them
+// locally by dropping files with the same names into public/images/.
+const heroBg = "/images/hero-bg.jpg";
+const aboutImg = "/images/about.jpg";
+const p1 = "/images/p1.jpg";
+const p2 = "/images/p2.jpg";
+const p3 = "/images/p3.jpg";
+const p4 = "/images/p4.jpg";
+const p5 = "/images/p5.jpg";
+const p6 = "/images/p6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Simone — Personal Portfolio" },
+      { title: "Brenda Madzinga — Software Developer Portfolio" },
       {
         name: "description",
         content:
-          "Simone Olivia, web developer based in Los Angeles. Portfolio, services, resume and contact.",
+          "Chipo Brenda Madzinga — Software Developer based in Harare, Zimbabwe. Frontend, backend & system development portfolio.",
       },
-      { property: "og:title", content: "Simone — Personal Portfolio" },
+      { property: "og:title", content: "Brenda Madzinga — Software Developer" },
       {
         property: "og:description",
-        content: "Personal portfolio of Simone Olivia, web developer.",
+        content: "Portfolio of Chipo Brenda Madzinga, software developer specialising in React, Python & Django.",
       },
     ],
   }),
@@ -70,7 +73,7 @@ function Header() {
           }}
           className="text-2xl font-semibold text-white tracking-wide"
         >
-          Simone
+          Brenda
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
@@ -88,9 +91,9 @@ function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4 text-white/90">
-          <a href="#" aria-label="Twitter" className="hover:text-primary transition-colors"><Twitter size={16} /></a>
-          <a href="#" aria-label="Facebook" className="hover:text-primary transition-colors"><Facebook size={16} /></a>
-          <a href="#" aria-label="Dribbble" className="hover:text-primary transition-colors"><Dribbble size={16} /></a>
+          <a href="https://twitter.com/" aria-label="Twitter" className="hover:text-primary transition-colors"><Twitter size={16} /></a>
+          <a href="https://facebook.com/" aria-label="Facebook" className="hover:text-primary transition-colors"><Facebook size={16} /></a>
+          <a href="https://github.com/" aria-label="GitHub" className="hover:text-primary transition-colors"><Github size={16} /></a>
         </div>
       </div>
     </header>
@@ -114,10 +117,10 @@ function Hero() {
       <div className="relative z-10 px-6 max-w-3xl">
         <p className="text-white text-lg md:text-xl mb-4">Welcome</p>
         <h1 className="text-white text-5xl md:text-7xl font-semibold mb-6">
-          I'm <span className="text-primary">Simone</span>
+          I'm <span className="text-primary">Brenda</span>
         </h1>
         <p className="text-white/85 text-base md:text-lg mb-10">
-          based in Los Angeles, California.
+          Software Developer based in Harare, Zimbabwe.
         </p>
         <a
           href="#contact"
@@ -159,10 +162,10 @@ function SectionHeader({ subtitle, title }: { subtitle: string; title: string })
 
 function About() {
   const stats = [
-    { num: "10+", label: "Years Experience" },
-    { num: "250+", label: "Happy Clients" },
-    { num: "650+", label: "Projects Done" },
-    { num: "38", label: "Get Awards" },
+    { num: "2+", label: "Years Experience" },
+    { num: "5+", label: "Projects Built" },
+    { num: "4+", label: "Tech Stacks" },
+    { num: "1", label: "Degree (BSc Hons)" },
   ];
   return (
     <section id="about" className="py-24 bg-background">
@@ -179,21 +182,22 @@ function About() {
           />
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-              I'm Simone Olivia, a <span className="text-primary">Web Developer</span>
+              I'm Chipo Brenda Madzinga, a <span className="text-primary">Software Developer</span>
             </h3>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              I help you build a brand for your business at an affordable price. Thousands of
-              clients have procured exceptional results while working with our dedicated team.
+              I build reliable systems end-to-end — from clean, responsive frontends to robust
+              backends. I'm proficient in HTML, CSS, React, Python and Django, and I enjoy turning
+              real-world problems into well-engineered software.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Delivering work within time and budget which meets the client's requirements is our
-              motto. Quality and consistency are at the heart of every project.
+              Alongside development, I also do UI/UX design and web design — making sure the
+              systems I deliver are both functional and pleasant to use.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 text-sm">
-              <p><span className="font-semibold text-foreground">Name:</span> Simone Olivia</p>
-              <p><span className="font-semibold text-foreground">Email:</span> chat@simone.com</p>
-              <p><span className="font-semibold text-foreground">Age:</span> 28</p>
-              <p><span className="font-semibold text-foreground">From:</span> Los Angeles, CA</p>
+              <p><span className="font-semibold text-foreground">Name:</span> Chipo Brenda Madzinga</p>
+              <p><span className="font-semibold text-foreground">Email:</span> madzingabrenda72@gmail.com</p>
+              <p><span className="font-semibold text-foreground">Age:</span> 25</p>
+              <p><span className="font-semibold text-foreground">From:</span> Harare, Zimbabwe</p>
             </div>
             <a href="#" className="btn-primary-pill">
               <Download size={16} className="mr-2" /> Download CV
@@ -215,12 +219,12 @@ function About() {
 
 function Services() {
   const services = [
-    { icon: Palette, title: "Graphic Design" },
     { icon: Monitor, title: "Web Design" },
+    { icon: Code2, title: "Frontend Development" },
+    { icon: Server, title: "Backend & System Development" },
     { icon: Layers, title: "UI/UX Design" },
-    { icon: Smartphone, title: "App Design & Develop" },
-    { icon: BarChart3, title: "Business Analysis" },
-    { icon: Search, title: "SEO Marketing" },
+    { icon: Palette, title: "E‑commerce Solutions" },
+    { icon: Smartphone, title: "Responsive Web Apps" },
   ];
   return (
     <section id="services" className="py-24" style={{ backgroundColor: "var(--section-bg)" }}>
@@ -237,8 +241,8 @@ function Services() {
               </div>
               <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Helping businesses grow with thoughtful design and dependable delivery — tailored
-                to your goals, audience, and brand.
+                Delivering practical software with clean code and a thoughtful user experience —
+                tailored to your goals, users and budget.
               </p>
             </div>
           ))}
@@ -248,7 +252,7 @@ function Services() {
   );
 }
 
-function TimelineItem({ date, title, place }: { date: string; title: string; place: string }) {
+function TimelineItem({ date, title, place, desc }: { date: string; title: string; place: string; desc?: string }) {
   return (
     <div className="relative pl-8 pb-10 border-l border-border last:pb-0">
       <span className="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-primary" />
@@ -258,8 +262,7 @@ function TimelineItem({ date, title, place }: { date: string; title: string; pla
       <h4 className="text-lg font-semibold">{title}</h4>
       <p className="text-sm text-muted-foreground mb-2">{place}</p>
       <p className="text-sm text-muted-foreground leading-relaxed">
-        Worked closely with cross-functional teams to ship polished products on time, with an
-        emphasis on usability, accessibility and design quality.
+        {desc ?? "Collaborated with teams to design and ship reliable, user-friendly systems."}
       </p>
     </div>
   );
@@ -287,26 +290,32 @@ function Resume() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold mb-8">My Education</h3>
-            <TimelineItem date="2000 - 2004" title="Computer Science" place="International University" />
-            <TimelineItem date="2005 - 2008" title="Bachelor Degree" place="University of California" />
-            <TimelineItem date="2009 - 2012" title="Master Degree" place="Harvard University" />
+            <TimelineItem
+              date="Graduated"
+              title="BSc Honours in Software Engineering"
+              place="Zimbabwe Open University (ZOU)"
+              desc="Studied software engineering principles, system design, databases and full‑stack development."
+            />
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-8">My Experience</h3>
-            <TimelineItem date="2012 - 2013" title="Jr. UI UX Designer" place="Themeforest" />
-            <TimelineItem date="2014 - 2016" title="Jr. Product Designer" place="Dribbble" />
-            <TimelineItem date="2017 - 2019" title="Product Designer" place="Adobe" />
+            <TimelineItem
+              date="2+ Years"
+              title="Resident Innovator — System Development"
+              place="Zimbabwe Centre for High Performance Computing (ZCHPC)"
+              desc="Collaborated on building different systems including the ZCHPC ERP, web platforms and internal tools using Python, Django and React."
+            />
           </div>
         </div>
         <div className="mt-16">
           <h3 className="text-2xl font-semibold mb-8 text-center">My Skills</h3>
           <div className="grid md:grid-cols-2 gap-x-12 max-w-4xl mx-auto">
-            <Skill name="Web Design" value={65} />
-            <Skill name="HTML/CSS" value={95} />
-            <Skill name="JavaScript" value={80} />
+            <Skill name="Python" value={80} />
             <Skill name="React JS" value={70} />
-            <Skill name="Angular JS" value={60} />
-            <Skill name="Bootstrap" value={99} />
+            <Skill name="JavaScript" value={70} />
+            <Skill name="HTML / CSS" value={75} />
+            <Skill name="Django" value={75} />
+            <Skill name="UI/UX Design" value={70} />
           </div>
           <div className="text-center mt-10">
             <a href="#" className="btn-primary-pill">
@@ -320,16 +329,16 @@ function Resume() {
 }
 
 const projects = [
-  { img: p1, title: "Brand Identity", cat: "Brand" },
-  { img: p2, title: "Landing Page", cat: "Design" },
-  { img: p3, title: "Mobile App UI", cat: "Design" },
-  { img: p4, title: "Lens Story", cat: "Photos" },
-  { img: p5, title: "Coffee Logo", cat: "Brand" },
-  { img: p6, title: "Dashboard UX", cat: "Design" },
+  { img: p1, title: "CALSWUZ Website (calswuz.org.zw)", cat: "Web" },
+  { img: p2, title: "ZCHPC ERP System", cat: "Systems" },
+  { img: p3, title: "Farm Connect — E‑commerce", cat: "Web" },
+  { img: p4, title: "Online Clearance System (PHP)", cat: "Systems" },
+  { img: p5, title: "CV / Resume Ranking System (Python & Django)", cat: "Systems" },
+  { img: p6, title: "UI/UX Concepts", cat: "Design" },
 ];
 
 function Portfolio() {
-  const filters = ["All", "Design", "Brand", "Photos"];
+  const filters = ["All", "Web", "Systems", "Design"];
   const [active, setActive] = useState("All");
   const items = active === "All" ? projects : projects.filter((p) => p.cat === active);
   return (
@@ -376,32 +385,16 @@ function Portfolio() {
   );
 }
 
-const testimonials = [
-  { name: "Patrick Cary", role: "Freelancer from USA", text: "I am happy working with Simone — exceptional results and great communication throughout the entire project." },
-  { name: "Chris Tom", role: "User from UK", text: "I have used them twice now. Good rates, very efficient service and excellent design quality. Highly recommend." },
-  { name: "Dennis Jacques", role: "User from USA", text: "Only trying it out for a few days, but up to now everything has been excellent and seems to work flawlessly." },
-];
-
 function Testimonials() {
   return (
     <section className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader subtitle="Client Speak" title="Testimonial" />
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div key={t.name} className="p-8 rounded-lg bg-secondary">
-              <p className="text-muted-foreground italic leading-relaxed mb-6">"{t.text}"</p>
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center font-semibold text-primary">
-                  {t.name.split(" ").map((s) => s[0]).join("")}
-                </div>
-                <div>
-                  <p className="font-semibold">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="max-w-2xl mx-auto text-center p-10 rounded-lg bg-secondary">
+          <p className="text-muted-foreground leading-relaxed">
+            Testimonials coming soon — I'm currently collecting feedback from collaborators and
+            clients on recently delivered projects.
+          </p>
         </div>
       </div>
     </section>
@@ -419,25 +412,33 @@ function Contact() {
             <div className="space-y-4 text-muted-foreground">
               <p className="flex items-start gap-3">
                 <MapPin className="text-primary mt-1 flex-shrink-0" size={18} />
-                <span>4th Floor, Plot No.22,<br />145 Murphy Canyon Rd.<br />San Diego CA 2028</span>
+                <span>141 Chilimanzi Crescent,<br />Glen Norah A,<br />Harare, Zimbabwe</span>
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="text-primary flex-shrink-0" size={18} />
-                <span>(060) 444 434 444 — (060) 555 545 555</span>
+                <a href="tel:+263786729830" className="hover:text-primary">+263 78 672 9830</a>
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="text-primary flex-shrink-0" size={18} />
-                <a href="mailto:chat@simone.com" className="hover:text-primary">chat@simone.com</a>
+                <a href="mailto:madzingabrenda72@gmail.com" className="hover:text-primary">madzingabrenda72@gmail.com</a>
               </p>
             </div>
             <h3 className="text-xl font-semibold mt-10 mb-4">Follow Me</h3>
             <div className="flex gap-3">
-              {[Twitter, Facebook, Instagram, Linkedin, Dribbble].map((Icon, i) => (
+              {[
+                { Icon: Github, href: "https://github.com/", label: "GitHub (Brenda Madzing)" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/", label: "LinkedIn (Brenda Madzinga)" },
+                { Icon: Facebook, href: "https://facebook.com/", label: "Facebook (Chipo Brenda Madzinga)" },
+                { Icon: Instagram, href: "https://instagram.com/", label: "Instagram (Chipo Brenda Madzinga)" },
+                { Icon: Twitter, href: "https://twitter.com/", label: "Twitter (Brenda Madzinga)" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
                   className="h-10 w-10 rounded-full bg-background border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-                  aria-label="Social"
+                  aria-label={label}
                 >
                   <Icon size={16} />
                 </a>
@@ -481,7 +482,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="py-8 text-center text-sm text-muted-foreground bg-background border-t border-border">
-      © {new Date().getFullYear()} Simone. All rights reserved.
+      © {new Date().getFullYear()} Chipo Brenda Madzinga. All rights reserved.
     </footer>
   );
 }
