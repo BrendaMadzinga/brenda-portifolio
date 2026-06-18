@@ -19,6 +19,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 
+import cvAsset from "../assets/Chipo_Brenda_Madzinga_CV.pdf.asset.json";
+
 // Images are served from the public/images folder so you can replace them
 // locally by dropping files with the same names into public/images/.
 const heroBg = "/images/hero-bg.jpg";
@@ -199,7 +201,7 @@ function About() {
               <p><span className="font-semibold text-foreground">Age:</span> 25</p>
               <p><span className="font-semibold text-foreground">From:</span> Harare, Zimbabwe</p>
             </div>
-            <a href="#" className="btn-primary-pill">
+            <a href={cvAsset.url} download="Chipo_Brenda_Madzinga_CV.pdf" target="_blank" rel="noreferrer" className="btn-primary-pill">
               <Download size={16} className="mr-2" /> Download CV
             </a>
           </div>
@@ -318,7 +320,7 @@ function Resume() {
             <Skill name="UI/UX Design" value={70} />
           </div>
           <div className="text-center mt-10">
-            <a href="#" className="btn-primary-pill">
+            <a href={cvAsset.url} download="Chipo_Brenda_Madzinga_CV.pdf" target="_blank" rel="noreferrer" className="btn-primary-pill">
               <Download size={16} className="mr-2" /> Download CV
             </a>
           </div>
