@@ -195,7 +195,7 @@ function About() {
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 text-sm">
               <p><span className="font-semibold text-foreground">Name:</span> Chipo Brenda Madzinga</p>
-              <p><span className="font-semibold text-foreground">Email:</span> madzingabrenda72@gmail.com</p>
+              <p><span className="font-semibold text-foreground">Email:</span> madzingabrenda720@gmail.com</p>
               <p><span className="font-semibold text-foreground">Age:</span> 25</p>
               <p><span className="font-semibold text-foreground">From:</span> Harare, Zimbabwe</p>
             </div>
@@ -416,11 +416,11 @@ function Contact() {
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="text-primary flex-shrink-0" size={18} />
-                <a href="tel:+263786729830" className="hover:text-primary">+263 78 672 9830</a>
+                <a href="tel:+263786172983" className="hover:text-primary">+263 78 617 2983</a>
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="text-primary flex-shrink-0" size={18} />
-                <a href="mailto:madzingabrenda72@gmail.com" className="hover:text-primary">madzingabrenda72@gmail.com</a>
+                <a href="mailto:madzingabrenda720@gmail.com" className="hover:text-primary">madzingabrenda720@gmail.com</a>
               </p>
             </div>
             <h3 className="text-xl font-semibold mt-10 mb-4">Follow Me</h3>
