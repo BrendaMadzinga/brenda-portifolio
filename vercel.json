@@ -1,21 +1,6 @@
 {
-  "outputDirectory": "dist/client",
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/*",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "index,follow"
-        }
-      ]
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "NITRO_PRESET=vercel bun run build",
+  "installCommand": "bun install",
+  "framework": null
 }
-
